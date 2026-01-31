@@ -1,0 +1,20 @@
+menu "Litter Robot Cat Detection Component"
+
+    choice LITTER_ROBOT_DETECT_MODEL
+        prompt "Select Litter Robot Cat Detection model"
+        default LITTER_ROBOT_MODEL_TFLITE
+        help
+            Choose which Litter Robot Cat Detection model to use in the application.
+
+        config LITTER_ROBOT_MODEL_TFLITE
+            bool "Use tflite model for Litter Robot Cat Detection"
+            help
+                Enable this component to use the Litter Robot Cat Detection model with TensorFlow Lite.
+
+        config LITTER_ROBOT_MODEL_ESP_PPQ
+            bool "Use ESP-PPQ model for Litter Robot Cat Detection"
+            help
+                Enable this component to use the Litter Robot Cat Detection model with ESP-PPQ.
+    endchoice
+
+endmenu 
