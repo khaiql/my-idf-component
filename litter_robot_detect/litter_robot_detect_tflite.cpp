@@ -2,11 +2,14 @@
 #include "esp_log.h"
 #include "litter_robot_detect.hpp"
 #include "model_data.h"
-#include <esp_jpeg_common.h>
-#include <esp_jpeg_dec.h>
 #include <stdio.h>
 
 #define USE_ESP_NEW_JPEG 1
+
+#ifdef USE_ESP_NEW_JPEG
+#include <esp_jpeg_common.h>
+#include <esp_jpeg_dec.h>
+#endif
 
 litter_robot_detect::CatDetect::CatDetect() {}
 
